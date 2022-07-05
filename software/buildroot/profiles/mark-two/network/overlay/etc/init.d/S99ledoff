@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "$1" != "start" ]; then
+  exit 0
+fi
+
+echo none > /sys/bus/platform/drivers/leds-gpio/leds/leds/LED_WHITE/trigger
+echo 1 > /sys/bus/platform/drivers/leds-gpio/leds/leds/LED_WHITE/brightness

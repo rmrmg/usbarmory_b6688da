@@ -1,0 +1,24 @@
+From 58c00c3f171b60f759b5e1c1438cae0f4c2c7dca Mon Sep 17 00:00:00 2001
+From: Andrej Rosano <andrej.rosano@f-secure.com>
+Date: Tue, 13 Feb 2018 16:02:47 +0100
+Subject: [PATCH 3/3] Disable CLI
+
+Signed-off-by: Andrej Rosano <andrej.rosano@f-secure.com>
+---
+ configs/usbarmory_defconfig | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/configs/usbarmory_defconfig b/configs/usbarmory_defconfig
+index 2c5c348624..92c63ab17d 100644
+--- a/configs/usbarmory_defconfig
++++ b/configs/usbarmory_defconfig
+@@ -24,3 +24,6 @@ CONFIG_FIT_SIGNATURE=y
+ CONFIG_DM=y
+ CONFIG_RSA=y
+ CONFIG_RSA_SOFTWARE_EXP=y
++CONFIG_CMDLINE=n
++CONFIG_BOOTARGS="console=ttymxc0,115200 root=/dev/mmcblk0p1 rootwait rw"
++CONFIG_USE_BOOTARGS=y
+-- 
+2.16.2
+
